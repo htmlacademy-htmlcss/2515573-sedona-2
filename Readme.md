@@ -2,6 +2,7 @@
 
 * Студент: [Мария Гаврилова](https://up.htmlacademy.ru/htmlcss-individual/2/user/2515573).
 * Наставник: [Ярослав Шевцов] (https://htmlacademy.ru/profile/redx).
+* Сайт: [Мой сайт Седона] (https://mariagavrilova2704.github.io/2515573-sedona-2/).
 
 ---
 
