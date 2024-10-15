@@ -84,7 +84,7 @@ body {
 }
 
 .button:hover,
-.button:focus {
+.button:focus-visible {
   background-color: #615048;
 }
 
@@ -124,26 +124,59 @@ body {
   margin-left: 30px;
 }
 
-.navigation-item {
-  padding: 20px 16px;
-}
-
 .navigation-user {
   display: flex;
   margin-left: auto;
 }
 
-.navigation-user-item {
-  padding: 22px 12px;
-}
-
 .navigation-link {
+  display: inline-block;
   font-size: 20px;
   line-height: 24px;
   font-weight: 700;
   text-align: center;
   color: #000000;
   text-decoration: none;
+  padding: 20px 16px;
+}
+
+.navigation-user-button {
+  align-self: center;
+}
+
+.navigation-link-search {
+  display: inline-block;
+  background-image: url("../images/search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 100%;
+}
+
+.navigation-link-favourite {
+  position: relative;
+  display: inline-block;
+  background-image: url("../images/favourite.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 44px;
+  height: 100%;
+  margin-right: 20px;
+}
+
+.likes-number {
+  position: absolute;
+  font-size: 10px;
+  line-height: 10px;
+  font-weight: 400;
+  color: #ffffff;
+  background-color: #7db54f;
+  border-radius: 10px;
+  padding: 5px;
+  top: 11px;
+  right: 4px;
+  left: 20px;
+  bottom: 33px;
 }
 
 /* блок main-hero */
@@ -336,7 +369,7 @@ body {
 }
 
 .btn:hover,
-.btn:focus {
+.btn:focus-visible {
   background-color: #615048;
 }
 
@@ -418,7 +451,7 @@ body {
 }
 
 .btn-colored:hover,
-.btn-colored:focus {
+.btn-colored:focus-visible {
   background-color: #68a2ca;
 }
 
@@ -456,7 +489,8 @@ body {
   color: #000000;
 }
 
-.footer-contacts-phone:hover {
+.footer-contacts-phone:hover,
+.footer-contacts-phone:focus-visible {
   color: #756157;
 }
 
@@ -473,24 +507,23 @@ body {
   display: flex;
   padding-top: 5px;
   padding-bottom: 5px;
-  width: 142px;
-  gap: 27px;
 }
 
-.footer-social-item {
-  position: relative;
-  padding: 13px 11px;
+.button-social {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 47px;
+  height: 40px;
 }
 
-.footer-social-icon {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  left: 0;
+.button-social svg {
+  fill: #83b3d3;
 }
 
-.button-social:hover svg {
- fill:  #68A2CA
+.button-social:hover svg,
+.button-social:focus-visible svg {
+  fill: #68a2ca;
 }
 
 .page-footer-container {
@@ -500,14 +533,22 @@ body {
 }
 
 .footer-logo {
-  margin-left: auto;
   padding-top: 8px;
   padding-bottom: 8px;
   padding-left: 41px;
 }
 
-.footer-logo:hover svg {
+.footer-logo svg {
+  fill: #000000;
+}
+
+.footer-logo:hover svg,
+.footer-logo:focus-visible svg {
   fill: #756157;
+}
+
+.footer-logo:active svg {
+  fill: rgba(117, 97, 87, 0.3);
 }
 
 /* блок страницы каталога с фильтрами*/
@@ -578,7 +619,7 @@ body {
   font-size: 16px;
   line-height: 21px;
   padding-bottom: 40px;
-  gap: 10px;
+  gap: 28px;
 }
 
 .breadcrumbs-link {
@@ -588,6 +629,24 @@ body {
 
 .breadcrumbs-item {
   padding: 4px 1px;
+}
+
+.breadcrumbs-item-home {
+  position: relative;
+}
+
+.breadcrumbs-item-home::after {
+  content: "";
+  position: absolute;
+  left: 25px;
+  top: 10px;
+
+  width: 6px;
+  height: 10px;
+
+  background-image: url("../images/breadcrumbs-arrow.svg");
+  background-repeat: no-repeat;
+  background-size: 6px 10px;
 }
 
 .catalog-filter-title {
@@ -630,30 +689,27 @@ body {
   font-size: 16px;
   line-height: 20px;
   font-weight: 700;
-  text-align: center;
   color: #ffffff;
   width: 191px;
-  text-decoration: none;
   text-transform: uppercase;
   background-color: transparent;
-  padding: 8px 57px;
   margin: 0;
   min-height: 36px;
   border: 0;
   border-radius: 4px;
 }
 
-.button-drop:hover .button-drop:active {
-  color: rgba(255, 255, 255, 1);
+.button-drop:hover,
+.button-drop:active {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.button-drop:focus {
+.button-drop:focus-visible {
   border: 3px solid #83b3d3;
 }
 
 .button-drop.disabled {
-  color: rgba(255, 255, 255, 1);
-  opacity: 10%;
+  color: rgba(255, 255, 255, 0.1);
 }
 
 .filter-buttons {
@@ -666,22 +722,46 @@ body {
   font-size: 18px;
   line-height: 21px;
   color: #333333;
-  margin-left: 200px;
   border: 2px solid #e5e5e5;
   border-radius: 4px;
   width: 292px;
+  padding: 14px 20px;
+  appearance: none;
+  margin-left: 200px;
 }
 
 /* блок страницы с отелями*/
 .catalog-hotels-lead {
-  padding: 7px;
+  padding-top: 7px;
+  padding-bottom: 7px;
   margin: 0;
 }
 
 .catalog-hotels-viewlist {
   display: flex;
-  margin-left: auto;
+  margin-left: 70px;
   gap: 8px;
+}
+
+.button-hotels {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border: 2px solid #e5e5e5;
+  border-radius: 4px;
+}
+
+.button-hotels:hover,
+.button-hotels:active {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.button-hotels:focus-visible {
+  border: 2px solid #68a2ca;
+  border-radius: 4px;
 }
 
 .control-input {
@@ -694,12 +774,6 @@ body {
 .catalog-hotels-viewitem a {
   color: #000000;
   text-decoration: none;
-}
-
-.catalog-hotels-viewitem {
-  padding: 17px 16px;
-  border: 2px solid #e5e5e5;
-  border-radius: 4px;
 }
 
 .viewitem-current {
@@ -796,10 +870,8 @@ body {
   border-radius: 4px;
 }
 
-.btn-favourites:hover {
-  background-color: #6c9e42;
-}
-.btn-favourites:focused {
+.btn-favourites:hover,
+.btn-favourites:focus-visible {
   background-color: #6c9e42;
 }
 
@@ -814,29 +886,35 @@ body {
 
 .hotels-rating-row {
   display: flex;
-  padding: 0;
-  margin: 0;
 }
 
 .hotels-rating {
   font-size: 16px;
   line-height: 20px;
   text-transform: uppercase;
-  text-align: end;
   background-color: #f2f2f2;
   padding: 9px 22px 8px 23px;
   margin: 0;
   margin-top: 16px;
   border-radius: 4px;
+  margin-left: auto;
 }
 
 .stars {
-  padding-right: 52px;
-  background-image: url("../images/star.svg"), url("../images/star.svg"),
-    url("../images/star.svg"), url("../images/star.svg");
-  background-repeat: no-repeat;
-  background-size: 16px 16px;
-  background-position: right 20px, right 20px, right 20px, right 20px;
+  background-image: url("../images/star.svg");
+  background-repeat: space;
+}
+
+.four-stars {
+  width: 82px;
+}
+
+.three-stars {
+  width: 60px;
+}
+
+.two-stars {
+  width: 42px;
 }
 
 .catalog-hotels {
@@ -880,7 +958,16 @@ body {
   text-decoration: none;
 }
 
-.pagination-current {
+.pagination-item:hover, .pagination-item:focus-visible {
+  background-color: #68A2CA;
+}
+
+.pagination-item:active {
+  background-color: #82B3D3;
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.pagination-current, .pagination-current:hover, .pagination-current:focus-visible, .pagination-current:active {
   color: #000000;
   background-color: #f2f2f2;
 }
