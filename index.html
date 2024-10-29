@@ -6,6 +6,7 @@
     <title>Седона.Городок в Аризоне</title>
     <link rel="stylesheet" href="styles/styles.css">
     <link rel="icon" href="favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
   </head>
 
   <body>
@@ -176,7 +177,7 @@
         </div>
       </footer>
     </div>
-    <div class="modal-container modal-container-close">
+    <div class="modal-container modal-container-close modal-container-active">
       <div class="modal modal-hotels">
         <button class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
@@ -187,37 +188,54 @@
             <p class="field-group field-group-date">
               <label class="visually-hidden" for="checkin-date">Дата заезда:</label>
               <span class="modal-label">Дата Заезда:</span>
-              <input class="hotels-form-field field" type="date" id="checkin-date" name="checkin-date"
-                placeholder="27 апреля 2020">
+              <input class="hotels-form-field field" type="text" id="checkin-date" name="checkin-date"
+                value="27 апреля 2020">
             </p>
+            <span class="modal-datein-text">Мы не можем отправить вас в прошлое.</span>
             <p class="field-group field-group-date">
               <label class="visually-hidden" for="checkout-date">Дата выезда:</label>
               <span class="modal-label">Дата Выезда:</span>
-              <input class="hotels-form-field field" type="date" id="checkout-date" name="checkout-date"
+              <input class="hotels-form-field field" type="text" id="checkout-date" name="checkout-date"
                 value="1 сентября 2023">
             </p>
+            <span class="modal-dateout-text">На эти даты есть свободные номера. Пока есть.</span>
             <div class="modal-people-container">
-              <p class="field-group field-group-people">
-                <label class="visually-hidden" for="grownups">Взрослые:</label>
-                <span class="modal-label">Взрослые:</span>
-                <input class="hotels-field people" type="number" id="grownups" name="grownups">
+              <p class="field-group field-group-people field-group-grownups">
+                <label>
+                  <span class="modal-label modal-label-grownups">Взрослые:</span>
+                  <div class="grownups">
+                    <button type="button" class="modal-field-grownups min-number-grownups">
+                      <span class="visually-hidden">Уменьшить количество</span>
+                      <button type="button" class="modal-field-grownups max-number-grownups">
+                        <span class="visually-hidden">Увеличить количество</span>
+                  </div>
+                  <input class="hotels-field people hotels-field-grownups" type="text" name="grownups" value="2">
+                </label>
               </p>
-              <p class="field-group field-group-people">
-                <label class="visually-hidden" for="children">Дети:</label>
-                <span class="modal-label">Дети:</span>
-                <span class="tooltip">
-                  <button class="tooltip-toggle" type="button">
-                    <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20"
-                      xmlns="http://www.w3.org/2000/svg">
-                      <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff" />
-                    </svg>
-                  </button>
-                  <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до 18 лет. Дети до 6 лет размещаются бесплатно.</span>
-                </span>
-                <input class="hotels-field people" type="number" id="children" name="children">
-              </p>
-            </div>
-            <button class="modal-hotels-button btn btn-colored" type="submit">Найти</button>
+                <p class="field-group field-group-people field-group-children">
+                  <label>
+                    <span class="modal-label modal-label-children">Дети:</span>
+                    <span class="tooltip">
+                      <button class="tooltip-toggle" type="button">
+                        <svg class="tooltip-icon" width="20" height="20" viewBox="0 0 20 20"
+                          xmlns="http://www.w3.org/2000/svg">
+                          <path fill-rule="evenodd" clip-rule="evenodd" d="M9 4h2v2H9V4Zm2 12H9V7h2v9Z" fill="#fff" />
+                        </svg>
+                      </button>
+                      <span class="tooltip-text">Укажите количество детей, которые будут с вами, возраст которых от 6 до
+                        18 лет. Дети до 6 лет размещаются бесплатно.</span>
+                    </span>
+                    <div class="children">
+                      <button type="button" class="modal-field-children min-number-children">
+                        <span class="visually-hidden">Уменьшить количество</span>
+                        <button type="button" class="modal-field-children max-number-children">
+                          <span class="visually-hidden">Увеличить количество</span>
+                    </div>
+                    <input class="hotels-field people hotels-field-children" type="text" name="children" value="2">
+                  </label>
+                </p>
+              </div>
+              <button class="modal-hotels-button btn btn-colored" type="submit">Найти</button>
           </form>
         </section>
       </div>
