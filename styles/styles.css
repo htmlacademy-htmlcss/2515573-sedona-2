@@ -174,9 +174,7 @@ body {
   border-radius: 10px;
   padding: 5px;
   top: 11px;
-  right: 4px;
   left: 20px;
-  bottom: 33px;
 }
 
 /* блок main-hero */
@@ -209,7 +207,7 @@ body {
   line-height: 36px;
   font-weight: 700;
   text-transform: uppercase;
-  margin-top: 0;
+  margin: 0;
   color: #000000;
 }
 
@@ -224,9 +222,8 @@ body {
 
 /* блок advantages*/
 .advantages-title-container {
-  height: 261px;
   margin: 0 auto;
-  padding: 69px 274px;
+  padding: 69px 274px 90px 274px;
   text-align: center;
 }
 
@@ -257,6 +254,10 @@ body {
 .advantages-container {
   display: flex;
   height: 385px;
+}
+
+.advantages-lead {
+  margin-bottom: 25px;
 }
 
 .advantages-description {
@@ -292,6 +293,10 @@ body {
 .services-description {
   margin: 0;
   padding-top: 30px;
+}
+
+.services-lead {
+  margin-bottom: 20px;
 }
 
 .souvenirs {
@@ -393,7 +398,12 @@ body {
 }
 
 .hotels-text {
+  margin:0;
+  margin-top: 20px;
   margin-bottom: 54px;
+  font-size: 22px;
+  line-height: 26px;
+  font-style: normal;
 }
 
 /* блок подписки*/
@@ -440,6 +450,7 @@ body {
   border-top-left-radius: 4px;
   border-bottom-left-radius: 4px;
   border-color: transparent;
+  padding-left: 18px;
 }
 
 .btn-colored {
@@ -500,7 +511,7 @@ body {
 
 .footer-contacts {
   padding: 5px 195px;
-  margin-left: 41px;
+  margin-left: 42px;
 }
 
 .footer-social-list {
@@ -631,7 +642,7 @@ body {
   width: 440px;
   background-image: url("../images/calendar.svg");
   background-repeat: no-repeat;
-  background-position: right 16px center;
+  background-position: right 20px center;
   margin-bottom: 48px;
 }
 
@@ -658,6 +669,7 @@ body {
 
 .modal-hotels-button {
   width: 100%;
+  height: 60px;
   border-radius: 10px;
   margin-top: 48px;
 }
@@ -883,7 +895,7 @@ body {
 
 .tooltip {
   position: absolute;
-  margin-left: 10px;
+  margin-left: 11px;
 }
 
 .tooltip-toggle:hover + .tooltip-text,
@@ -893,7 +905,7 @@ body {
 
 .modal-container-close {
   display: none;
-}
+} 
 
 /* блок страницы каталога с фильтрами*/
 .hotels-inner {
@@ -907,15 +919,14 @@ body {
 
 .catalog-hotels-container {
   display: flex;
-  padding-top: 50px;
-  padding-left: 70px;
-  padding-right: 70px;
+  padding: 50px 70px 38px 70px;
   min-height: 49px;
 }
 
 .filter-hotels-container {
   display: flex;
   gap: 140px;
+  padding-top: 40px;
 }
 
 .filter-price-container {
@@ -931,8 +942,8 @@ body {
 
 .price-from {
   position: absolute;
-  top: 12px;
-  left: 106px;
+  top: 13px;
+  left: 107px;
   color: #000000;
   opacity: 0.3;
 }
@@ -943,8 +954,8 @@ body {
 
 .price-to {
   position: absolute;
-  top: 12px;
-  left: 106px;
+  top: 13px;
+  left: 104px;
   color: #000000;
   opacity: 0.3;
 }
@@ -987,17 +998,13 @@ body {
   display: flex;
   font-size: 16px;
   line-height: 21px;
-  padding-bottom: 40px;
   gap: 28px;
+  padding-top: 8px;
 }
 
 .breadcrumbs-link {
   color: #ffffff;
   text-decoration: none;
-}
-
-.breadcrumbs-item {
-  padding: 4px 1px;
 }
 
 .breadcrumbs-item-home {
@@ -1008,7 +1015,7 @@ body {
   content: "";
   position: absolute;
   left: 25px;
-  top: 10px;
+  top: 5px;
 
   width: 6px;
   height: 10px;
@@ -1221,7 +1228,7 @@ body {
 .range-scale {
   position: relative;
   height: 4px;
-  margin-top: 48px;
+  margin-top: 44px;
   background-color: rgba(255, 255, 255, 0.3);
 }
 
@@ -1384,8 +1391,7 @@ body {
 
 .hotels-card {
   padding: 20px 20px;
-  border: 1px solid;
-  border-color: rgba(230, 230, 230, 1);
+  border: 1px solid rgba(230, 230, 230, 1);
   border-radius: 4px;
   margin: 0;
 }
@@ -1394,14 +1400,14 @@ body {
   display: grid;
   grid-template-columns: 340px 340px 340px;
   gap: 20px;
-  padding: 40px 70px;
+  padding: 0 70px 40px 70px;
 }
 
 .hotels-card-title {
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
-  padding-top: 16px;
+  padding-top: 12px;
   margin: 0;
 }
 
@@ -1510,11 +1516,11 @@ body {
 }
 
 .four-stars {
-  width: 82px;
+  width: 89px;
 }
 
 .three-stars {
-  width: 60px;
+  width: 66px;
 }
 
 .two-stars {
@@ -1530,7 +1536,7 @@ body {
 .pagination {
   display: flex;
   gap: 8px;
-  padding: 0 70px 60px 70px;
+  padding: 37px 70px 60px 70px;
 }
 
 .pagination-item {
@@ -1550,11 +1556,12 @@ body {
   padding: 11px 18px 12px 18px;
 }
 
-.dots {
+.pagination-dots {
   font-size: 22px;
   line-height: 26px;
   background-color: #ffffff;
   color: #000000;
+  padding: 16px 21px 17px 21px;
 }
 
 .pagination-link {
