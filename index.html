@@ -180,7 +180,7 @@
     </div>
     <div class="modal-container modal-container-close modal-container-active">
       <div class="modal modal-hotels">
-        <button class="modal-close-button">
+        <button type="button" class="modal-close-button">
           <span class="visually-hidden">Закрыть</span>
         </button>
         <section class="modal-content">
@@ -190,16 +190,16 @@
               <label class="visually-hidden" for="checkin-date">Дата заезда:</label>
               <span class="modal-label">Дата Заезда:</span>
               <input class="hotels-form-field field" type="text" id="checkin-date" name="checkin-date"
-                value="27 апреля 2020">
+                value="27 апреля 2020" required>
+                <span class="modal-datein-text">Мы не можем отправить вас в прошлое.</span>
             </p>
-            <span class="modal-datein-text">Мы не можем отправить вас в прошлое.</span>
             <p class="field-group field-group-date">
               <label class="visually-hidden" for="checkout-date">Дата выезда:</label>
               <span class="modal-label">Дата Выезда:</span>
               <input class="hotels-form-field field" type="text" id="checkout-date" name="checkout-date"
-                value="1 сентября 2023">
+                value="1 сентября 2023" required>
+                <span class="modal-dateout-text">На эти даты есть свободные номера. Пока есть.</span>
             </p>
-            <span class="modal-dateout-text">На эти даты есть свободные номера. Пока есть.</span>
             <div class="modal-people-container">
               <div class="field-group field-group-people field-group-grownups">
                 <label class="modal-label modal-label-grownups" for="adults">Взрослые:</label>
@@ -207,12 +207,12 @@
                   <button type="button" class="modal-field-grownups min-number-grownups">
                     <span class="visually-hidden">Уменьшить количество</span>
                   </button>
+                  <input class="hotels-field people hotels-field-grownups" id="adults" type="text" name="grownups"
+                  value="2">
                   <button type="button" class="modal-field-grownups max-number-grownups">
                     <span class="visually-hidden">Увеличить количество</span>
                   </button>
                 </div>
-                <input class="hotels-field people hotels-field-grownups" id="adults" type="text" name="grownups"
-                  value="2">
               </div>
               <div class="field-group field-group-people field-group-children">
                 <label class="modal-label modal-label-children" for="children">Дети:</label>
@@ -230,12 +230,12 @@
                   <button type="button" class="modal-field-children min-number-children">
                     <span class="visually-hidden">Уменьшить количество</span>
                   </button>
+                  <input class="hotels-field people hotels-field-children" id="children" type="text" name="children"
+                  value="2">
                   <button type="button" class="modal-field-children max-number-children">
                     <span class="visually-hidden">Увеличить количество</span>
                   </button>
                 </div>
-                <input class="hotels-field people hotels-field-children" id="children" type="text" name="children"
-                  value="2">
               </div>
             </div>
             <button class="modal-hotels-button btn btn-colored" type="submit">Найти</button>
